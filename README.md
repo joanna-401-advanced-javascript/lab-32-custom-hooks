@@ -1,48 +1,35 @@
-# LAB - TEMPLATE
+# LAB - 32A
 
-## Project Name
+## Custom Hooks
 
 ### Author: Joanna Arroyo
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
+* [submission PR](https://github.com/joanna-401-advanced-javascript/lab-32-custom-hooks/pull/1)
+* [travis](https://travis-ci.com/joanna-401-advanced-javascript/lab-32-custom-hooks)
 
 #### Documentation
-* [api docs](http://xyz.com) (API servers)
-* [jsdoc](http://xyz.com) (Server assignments)
-* [styleguide](http://xyz.com) (React assignments)
+* [styleguide](http://xyz.com)
 
 ### Modules
-#### `modulename.js`
+#### `index.js` `app.js` `useForm.js` `useSocket.js` `useQ.js` `setupTests.js` `server.js`
+
 ##### Exported Values and Methods
-
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
+###### `app.js -> React functional component`
+###### `useForm.js -> React functional component`
+###### `useSocket.js -> React functional component`
+###### `useQ.js -> React functional component`
 
 ### Setup
 #### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+* `REACT_APP_Q_SERVER` - Q server
 
 #### Running the app
 * `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
   
 #### Tests
 * Unit tests: `npm run test`
 * Lint tests: `npm run lint`
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
 
 #### UML
-Link to an image of the UML for your application and response to events
+![UML](./assets/uml.jpg)
