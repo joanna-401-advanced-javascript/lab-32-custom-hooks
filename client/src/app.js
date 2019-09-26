@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
-import useForm from "./hooks/useForm";
-import useSocket from "./hooks/useSocket";
-import useQ from "./hooks/useQ";
+import useForm from './hooks/useForm';
+import useSocket from './hooks/useSocket';
+import useQ from './hooks/useQ';
 
-const App = (props) => {
+const App = () => {
   const [values, handleChange, handleSubmit] = useForm({});
   const [queueMessage, setQueueMessage] = useState({});
   const [socketMessage, setSocketMessage] = useState({});
@@ -12,20 +12,18 @@ const App = (props) => {
   const [qSubscribe, qPublish] = useQ('deeds');
 
   const submitCallback = (formValues) => {
-    // Q.publish('deeds', 'work', formValues);
     qPublish('deeds', 'work', formValues);
     socketPublish('words', formValues);
   };
 
-  useEffect( () => {
-    qSubscribe('work', message => {
+  useEffect(() => {
+    qSubscribe('work', (message) => {
       setQueueMessage(message);
     });
 
-    socketSubscribe('incoming', message => {
+    socketSubscribe('incoming', (message) => {
       setSocketMessage(message);
     });
-
   }, []);
 
   return (
@@ -43,4 +41,3 @@ const App = (props) => {
 };
 
 export default App;
-

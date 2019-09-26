@@ -1,5 +1,4 @@
 const PORT = process.env.PORT || 3000;
-
 const io = require('socket.io')(PORT);
 
 io.on('connection', socket => {
@@ -11,7 +10,6 @@ io.on('connection', socket => {
   });
 
 });
-
 
 /// ALSO, do a q server on 3333...
 const Q = require('@nmq/q/server');
