@@ -32,4 +32,4 @@
 * Lint tests: `npm run lint`
 
 #### UML
-Link to an image of the UML for your application and response to events
+![UML](./assets/uml.jpg)
