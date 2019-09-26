@@ -8,7 +8,7 @@ export default function useForm(defaults = {}) {
   }
 
   function handleSubmit(event, callback) {
-    event.preventDefault();
+    event && event.preventDefault();
     event.target.reset();
     if (callback) {
       callback(values);
